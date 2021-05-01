@@ -1,0 +1,125 @@
+
+GIT - Developed by Linus Torvalds 
+Source code management tool
+Version control system 
+
+Git- Distributed Version COntroll 
+
+ 2 types of VCS :
+ Central V C S 
+ Distributed V C S 
+ 
+ Working directory - is a Folder- where Code is saved 
+ 
+ convert folder to working directory,
+ Git init
+ 
+ git config user.name "Machindra"
+ git config user.email "machindra220@gmail.com"
+ 
+ git config --global user.name "Machindra"
+ git config --global user.email "machindra220@gmail"
+ 
+ 3 types of files in git 
+ 
+ untracked files - by default file status is untracked 
+ staged files - 
+ comitted files - 
+ 
+ to check status of files, 
+ Git status
+ 
+ git add file.java 
+ git add .
+ 
+ To remove files from staging to untracked,
+ git rm --cached file.java 
+ 
+ git commit -m "My commit message"
+ 
+ to see list of commits,
+ 
+ git log 
+ 
+ to check commits in one line,
+ git log --oneline 
+ 
+ git branch branchname 
+ 
+ to check list of branch,
+ git branch
+ 
+ to change the working branch,
+ git checkout branchname
+ 
+to merge branch with master branch, - to merge any branch you'll be in master branch first 
+git merge test 
+
+QUESTION : How to add/commit Directories or files from directories ?
+Question : How to return to secon/last commit data change ? to go back .
+Question : How much branches, we can create in a project ?
+
+
+REBASE -> is fast forward of merge 
+To rebase you'll be on respected branch
+git rebase master 
+
+Then go to Master Branch,
+git checkout master 
+
+Then merge that branch to master branch,
+git merge test2 
+
+
+
+we can't change order/place of First/head Commit
+
+To rearrange the commit order/place 
+
+git rebase -i HEAD~(remaining-commits) i.e git rebase -i HEAD~4    [where n=total commits, n-1=4 ]
+
+After this command you'll be in one file, where you caan change the order of commits 
+
+MERGING COMMITS :
+We can't remove first commit 
+ 
+git rebase Head~4
+
+replace the word pick with squash in file , i=insert and save the rebase file 
+
+git log --oneline
+
+got to master branch and then hit command,
+git cherry-pick commit-id commit-id
+ex. git cherry-pick d6ertc f45gtr4
+
+git stash ( keeping something secret or hidden - if some work is unfinished we can keep that files hidden from user, so git cannot access it)
+
+1. to stash the stagged files
+$git stash
+
+2. to stash staged & untracked files
+$git stash -u 
+
+3. to see the list of stashes
+$git stash list
+
+4. to get back the stashed files
+$git stash pop
+
+5. to bring the older stash out 
+git stash pop stash@{stash_number}
+
+Git Ammend - meaning to override 
+
+git commit --amend -m "my commitname inwhich i want to amend this commit"
+
+
+
+
+
+
+
+
+
+
