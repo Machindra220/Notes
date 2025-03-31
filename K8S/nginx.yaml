@@ -8,3 +8,10 @@ spec:
   containers:
   - image: nginx
     name: nginx
+    volumeMounts:
+    - name: mealie-data
+      mountPath: /app/data
+  volumes:
+  - name: mealie-data
+    persistentVolumeClaim:
+      claimName: mealie-data
