@@ -1,0 +1,41 @@
+Here's a Python script to organize files and schedule it to run every 5 minutes after system startup. It will:
+
+Move files based on their extensions into specific folders.
+
+Use Task Scheduler (Windows) or cron (Linux/macOS) to run after system startup.
+
+Steps:
+Save the script as file_organizer.py.
+
+Use Task Scheduler (Windows) or cron (Linux/macOS) to run it after startup.
+
+Python Script:
+Auto File Sorter
+Scheduling:
+Windows (Task Scheduler)
+Open Task Scheduler → "Create Basic Task."
+
+Name it "File Organizer."
+
+Trigger → "When the computer starts."
+
+Action → "Start a program" → Browse for python.exe and add the script path as an argument.
+
+Finish.
+
+Linux/macOS (Cron)
+Open Terminal and type:
+
+bash
+Copy
+Edit
+crontab -e
+Add this line at the end:
+
+bash
+Copy
+Edit
+@reboot sleep 300 && python3 /path/to/file_organizer.py
+Save and exit.
+
+Now, your files will be organized automatically every time the system starts after a 5-minute delay! 
