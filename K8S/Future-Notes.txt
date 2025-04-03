@@ -1,0 +1,21 @@
+
+
+https://mischavandenburg.com/aboutme/
+
+
+Try some self-hosted applications which have docker compose files
+convert setup to Kubernetes manifests 
+try some helm charts
+
+Linkding - website applications
+Homepage -ii-
+techno-tim/littlelink-server 
+
+ingress 
+expose 
+-
+
+GitOps
+Certificate management with cert-manager
+Databases - 
+On-Prem with K3s and Talos 
